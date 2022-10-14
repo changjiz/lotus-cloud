@@ -1,7 +1,5 @@
 **项目说明** 
 - lotus-cloud是基于spring-cloud-alibaba 微服务架构，针对业务系统提供扩展，快速开发。
-<br>
-<br> 
 - 拉取后编译成jar，继承该项目即可使用。可放置私有maven库。
 <br> 
 <br>
