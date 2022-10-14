@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.lotus.common.configure.RestTemplateConfiguration,\
+  com.lotus.common.configure.ApplyConfiguration

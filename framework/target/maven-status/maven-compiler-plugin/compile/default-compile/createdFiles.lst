@@ -1,0 +1,10 @@
+com/lotus/framework/aop/HeaderInterceptor.class
+com/lotus/framework/base/BaseServiceImpl.class
+com/lotus/framework/configure/BaseWebMvcConfiguration.class
+com/lotus/framework/context/SecurityContextHolder.class
+com/lotus/framework/base/BaseUtils.class
+com/lotus/framework/base/BaseEntity.class
+com/lotus/framework/base/BaseController.class
+com/lotus/framework/base/BaseDao.class
+com/lotus/framework/base/BaseIdJson.class
+com/lotus/framework/base/BaseService.class

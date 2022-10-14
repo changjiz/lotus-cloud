@@ -1,0 +1,10 @@
+/Users/apple/git/xiyu/lotus-cloud/framework/src/main/java/com/lotus/framework/base/BaseServiceImpl.java
+/Users/apple/git/xiyu/lotus-cloud/framework/src/main/java/com/lotus/framework/context/SecurityContextHolder.java
+/Users/apple/git/xiyu/lotus-cloud/framework/src/main/java/com/lotus/framework/aop/HeaderInterceptor.java
+/Users/apple/git/xiyu/lotus-cloud/framework/src/main/java/com/lotus/framework/base/BaseIdJson.java
+/Users/apple/git/xiyu/lotus-cloud/framework/src/main/java/com/lotus/framework/base/BaseController.java
+/Users/apple/git/xiyu/lotus-cloud/framework/src/main/java/com/lotus/framework/base/BaseEntity.java
+/Users/apple/git/xiyu/lotus-cloud/framework/src/main/java/com/lotus/framework/base/BaseDao.java
+/Users/apple/git/xiyu/lotus-cloud/framework/src/main/java/com/lotus/framework/configure/BaseWebMvcConfiguration.java
+/Users/apple/git/xiyu/lotus-cloud/framework/src/main/java/com/lotus/framework/base/BaseUtils.java
+/Users/apple/git/xiyu/lotus-cloud/framework/src/main/java/com/lotus/framework/base/BaseService.java

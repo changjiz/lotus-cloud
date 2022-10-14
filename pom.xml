@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lotus</groupId>
+    <artifactId>lotus-cloud</artifactId>
+    <version>1.0.1</version>
+    <modules>
+        <module>common</module>
+        <module>datasources</module>
+        <module>web</module>
+        <module>framework</module>
+        <module>logger</module>
+        <module>redis</module>
+        <module>auth</module>
+        <module>security</module>
+        <module>spi</module>
+    </modules>
+
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <lotus-cloud.version>${project.parent.version}</lotus-cloud.version>
+
+        <spring-boot.version>2.6.4</spring-boot.version>
+        <spring-cloud.version>2021.0.1</spring-cloud.version>
+        <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
+        <alibaba.nacos.version>2.0.3</alibaba.nacos.version>
+
+        <druid.version>1.2.8</druid.version>
+        <knife4j.version>3.0.3</knife4j.version>
+        <hutool.version>5.7.16</hutool.version>
+    </properties>
+
+    <dependencies>
+        <!-- bootstrap 启动器 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!-- 依赖声明 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- SpringBoot 依赖配置 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- SpringCloud 微服务 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- SpringCloud Alibaba 微服务 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Alibaba Nacos 配置 -->
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${alibaba.nacos.version}</version>
+            </dependency>
+
+            <!--   mybatis-plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.3.1</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.baomidou</groupId>
+                        <artifactId>mybatis-plus-generator</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!--            commons-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.9</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.72</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.20</version>
+                <!--                <scope>provided</scope>-->
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-core</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-crypto</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!--swagger-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+
+            <!--            子模块-->
+            <dependency>
+                <groupId>com.lotus</groupId>
+                <artifactId>lotus-cloud-common</artifactId>
+                <version>${lotus-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lotus</groupId>
+                <artifactId>lotus-cloud-datasources</artifactId>
+                <version>${lotus-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lotus</groupId>
+                <artifactId>lotus-cloud-web</artifactId>
+                <version>${lotus-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lotus</groupId>
+                <artifactId>lotus-cloud-framework</artifactId>
+                <version>${lotus-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lotus</groupId>
+                <artifactId>lotus-cloud-logger</artifactId>
+                <version>${lotus-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lotus</groupId>
+                <artifactId>lotus-cloud-redis</artifactId>
+                <version>${lotus-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lotus</groupId>
+                <artifactId>lotus-cloud-auth</artifactId>
+                <version>${lotus-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lotus</groupId>
+                <artifactId>lotus-cloud-security</artifactId>
+                <version>${lotus-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lotus</groupId>
+                <artifactId>lotus-cloud-spi</artifactId>
+                <version>${lotus-cloud.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
