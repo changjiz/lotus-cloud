@@ -9,6 +9,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
 
@@ -19,6 +20,7 @@ import org.springframework.stereotype.Component;
  */
 @Aspect
 @Component
+@DependsOn({"springContextUtils"})
 public class SysLogAspect {
 
     private SysLogService sysLogService;
