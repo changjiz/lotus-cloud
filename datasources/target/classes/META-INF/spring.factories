@@ -1,4 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.lotus.datasources.aop.TxAdviceAspect,\
-  com.lotus.datasources.configure.MybatisPlusConfiguration,\
-  com.lotus.datasources.configure.DynamicDataSourceAutoConfiguration

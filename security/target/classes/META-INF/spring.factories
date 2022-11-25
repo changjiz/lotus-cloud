@@ -1,5 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.lotus.security.service.PermissionService,\
-  com.lotus.security.aop.InnerAuthAspect,\
-  com.lotus.security.aop.PreAuthorizeAspect,\
-  com.lotus.security.exception.SecurityExceptionHandler
