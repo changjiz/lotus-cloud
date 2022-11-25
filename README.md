@@ -38,7 +38,7 @@ lotus-cloud
 │
 ├─auth 认证（用户信息jwt生成token保存到redis,用户登录、认证模块调用）─common、redis
 │  
-├─security 授权安全（校验请求接口是否有权限访问,需要存储用户权限到缓存中）─暂未
+├─security 授权安全（校验请求接口是否有权限访问,需要存储用户权限到缓存中）─auth
 │  
 ├─spi 远程调用接口（生成spi给其他模块应用调用，使用注册中心和调本地接口一样简单）─common
 

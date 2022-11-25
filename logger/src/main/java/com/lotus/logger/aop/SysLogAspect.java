@@ -3,6 +3,7 @@ package com.lotus.logger.aop;
 import com.lotus.framework.base.BaseUtils;
 import com.lotus.logger.service.SysLogRabbitmqServiceImpl;
 import com.lotus.logger.service.SysLogService;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -18,15 +19,16 @@ import org.springframework.stereotype.Component;
  *
  * @author Mark changji_z@163.COM
  */
+@Slf4j
 @Aspect
 @Component
-@DependsOn({"springContextUtils"})
 public class SysLogAspect {
 
     private SysLogService sysLogService;
 
     public SysLogAspect() {
         this.sysLogService = new SysLogRabbitmqServiceImpl();
+        log.info("---> SysLogAspect init . default rabbitmq");
     }
 
     @Autowired(required = false)
