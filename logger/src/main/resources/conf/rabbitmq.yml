@@ -1,0 +1,13 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+    publisher-confirms: true
+    virtual-host: /dev
+    template:
+      receive-timeout: 3000
+      reply-timeout: 3000
+      retry:
+        enabled: false
